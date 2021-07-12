@@ -1,0 +1,172 @@
+.service-slider-page-section, .forfait-slider-page-section {
+    position: relative;
+}
+
+.service-img-section , .forfait-img-section{
+    position: absolute !important;
+    top: 0;
+    width: 100%;
+    height: calc(400px + 96px)
+}
+
+.service-slider-innerblock-img, .forfait-slider-innerblock-img {
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+}
+
+.service-slider-innerblock-img img, .forfait-slider-innerblock-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-slider-left-block:after {
+    content: " ";
+    position: absolute;
+    top: calc((100% - 160px)/2);
+    right: -50px;
+    border-width: 80px 25px 80px 25px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+    z-index: 1;
+}
+.forfait-slider-left-block:after {
+    content: " ";
+    position: absolute;
+    top: calc((100% - 160px)/2);
+    right: 100%;
+    border-width: 80px 25px 80px 25px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+    z-index: 1;
+    transform: rotate(180deg);
+}
+
+.service-post-name, .forfait-post-name {
+    color: #212529;
+    opacity: 0.4;
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    font-weight: 500;
+    padding-left: 35px;
+    text-transform: uppercase;
+    margin-bottom: 12px !important;
+    position: relative;
+    cursor: pointer;
+}
+
+.service-post-name:before, .forfait-post-name:before {
+    content: " ";
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #212529
+}
+
+.service-post-name:hover, .forfait-post-name:hover {
+    font-weight: 600;
+    opacity: 1;
+}
+
+#current_service_name, #current_forfait_name {
+    color: #fff;
+    font-size: 17px !important;
+    font-family: inherit;
+    letter-spacing: 2px;
+    line-height: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#current_service_text, #current_forfait_text {
+    color: #fff;
+    line-height: 25px;
+}
+
+a#current_service_url, a#current_forfait_url {
+    color: #fff;
+    border: 1px solid pink;
+    background-color: pink;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 22px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+a#current_service_url:hover, a#current_forfait_url:hover {
+    background-color: #212529;
+    border-color: #212529;
+    color: #fff;
+}
+
+.service_slide_name .item.current-slide .service-post-name, .forfait_slide_name .item.current-slide .forfait-post-name {
+    opacity: 1;
+}
+
+.service-img-section .item, .service_slide_content .item, .forfait-img-section .item, .forfait_slide_content .item {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+}
+
+.service-img-section .item.current-slide, .forfait-img-section .item.current-slide {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+}
+
+.service_slide_content .item.current-slide, .forfait_slide_content .item.current-slide {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+}
+
+@media only screen and (max-width: 767px) {
+    .service-slider-left-block:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        right: calc((100% - 160px)/2);
+        border-width: 25px 80px 25px 80px;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+    }
+    .forfait-slider-left-block:after {
+        content: " ";
+        position: absolute;
+        top: 100%;
+        right: calc((100% - 160px)/2);
+        border-width: 25px 80px 25px 80px;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+        transform: none; 
+    }
+    .service-slider-right-block .item, .forfait-slider-right-block .item {
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .service_slide_content, .forfait_slide_content {
+        width: 85% !important;
+    }
+    .service-img-section, .forfait-img-section {
+        top: 400px !important;
+        height: 400px;
+    }
+    .service-post-name, .forfait-post-name {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    /*
+    .service-slider-left-block, .forfait-slider-left-block {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: start!important;
+    */
+}

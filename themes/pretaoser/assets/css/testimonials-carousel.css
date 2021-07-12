@@ -1,0 +1,20 @@
+.testimonials-inner-block:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(http://localhost/pret-a-oser/wp-content/uploads/2020/11/left-quote1.png);
+    width: 45px;
+    height: 35px;
+
+}
+
+.testimonials-inner-block:after {
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: url(http://localhost/pret-a-oser/wp-content/uploads/2020/11/right-quote1.png);
+    width: 45px;
+    height: 35px
+}

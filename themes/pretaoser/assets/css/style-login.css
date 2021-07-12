@@ -1,0 +1,43 @@
+body{
+    background-color:rgba(255, 192, 203, 0.1)!important
+}
+
+body.login div#login h1 a {
+    background-image: url("../images/logo200x80.png");
+    background-size: 200px 80px;
+    width: 200px;
+    height: 80px;
+    box-shadow: 0 5px 8px rgba(0,0,0,.04);
+}
+
+body.login div#login p#nav a,
+body.login div#login p#backtoblog a {
+    color: #111111 !important; /* Your link color. */
+}
+
+body.login .message,
+body.login .success {
+    border-left: 4px solid #ff7bc9 !important;
+}
+body.login #wp-submit{
+    border-radius: 0px !important;
+    color:white !important;
+    border-color:#111 !important;
+    background-color: #111 !important;
+    width:100%;
+    margin-top:20px;
+    font-size: 16px;
+}
+body.login #wp-submit:hover{
+    color: #111 !important;
+    border-color: #ff7bc9 !important;
+    background-color: #ff7bc9 !important;
+}
+body.login form .input{
+    border-radius: 0px !important;
+    box-sizing: border-box;
+    color: #111;
+    border:1px solid #111;
+
+    
+}

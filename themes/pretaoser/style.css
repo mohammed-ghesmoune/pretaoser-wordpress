@@ -1,0 +1,369 @@
+/*
+Theme Name: Pret à Oser
+Author: mghesmoune
+Author URI: 
+Description: 
+Version: 1.0
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pao
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+    text-align: left;
+    background-color: #fff;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.navbar-nav li a {
+    text-transform: uppercase;
+    color: #212529 !important;
+    letter-spacing: .2em;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 13px;
+    cursor: pointer;
+}
+
+.navbar-nav li a:hover {
+    color: #d1b7b2!important;
+}
+
+.navbar-nav li.active>a:first-child {
+    color: #d1b7b2!important;
+}
+
+.navbar-nav>li {
+    padding: 0 10px;
+}
+
+.navbar-nav ul.dropdown-menu li {
+    padding: 10px !important;
+}
+
+#back-to-top {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 12px !important;
+    right: 17px;
+    bottom: 17px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    z-index: 99;
+    height: 30px;
+    width: 30px;
+    background-color: #333;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color 0.1s linear, bottom 0.1s linear;
+    -moz-transition: background-color 0.1s linear, bottom 0.1s linear;
+    -webkit-transition: background-color 0.1s linear, bottom 0.1s linear;
+    -o-transition: background-color 0.1s linear, bottom 0.1s linear;
+}
+
+#back-to-top:hover {
+    background-color: #d1b7b2;
+}
+
+#site-footer {
+    background-color: #000 !important;
+}
+
+/* widget social media icons */
+
+.widget_social-media .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0rem .5rem 0rem 0rem;
+}
+
+.widget_social-media .social-icon:last-child {
+    margin-right: 0;
+}
+
+.widget_social-media .social-icon:hover {
+    color: #d1b7b2;
+}
+
+.footer-copyright {
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 767px) {
+    .footer-copyright {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+    .footer-social-media {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* button template part */
+
+.pao-btn .pao-btn-border-one, .pao-btn .pao-btn-border-two {
+    border-color: #fff;
+    display: block;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.pao-btn .pao-btn-border-one {
+    position: absolute;
+    top: -6px;
+    left: 0;
+    height: calc(100% + 12px);
+    width: 100%;
+    border: 2px solid #111;
+    box-sizing: border-box;
+}
+
+.pao-btn .pao-btn-border-two {
+    position: absolute;
+    top: 0px;
+    left: -8px;
+    height: 100%;
+    width: calc(100% + 16px);
+    border: 1px solid #7A7A7A;
+    box-sizing: border-box;
+}
+
+.pao-btn:hover .pao-btn-border-one {
+    -webkit-transform: translate(-8px, 6px);
+    -moz-transform: translate(-8px, 6px);
+    transform: translate(-8px, 6px);
+    height: 100%;
+    width: calc(100% + 16px);
+}
+
+.pao-btn:hover .pao-btn-border-two {
+    -webkit-transform: translate(8px, -6px);
+    -moz-transform: translate(8px, -6px);
+    transform: translate(8px, -6px);
+    height: calc(100% + 12px);
+    width: 100%;
+}
+
+.pao-btn {
+    color: #111;
+    border: none;
+    margin: 6px 8px;
+    background-color: pink;
+    display: inline-block;
+    position: relative;
+    outline: none;
+    font-style: normal;
+    font-weight: 500;
+    padding: 17px 45px;
+    font-size: 12px;
+    /* font-family: "Playfair Display", sans-serif  !important; */
+    line-height: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    -webkit-transition: color 0.15s ease-out, background-color 0.15s ease-out;
+    -moz-transition: color 0.15s ease-out, background-color 0.15s ease-out;
+    transition: color 0.15s ease-out, background-color 0.15s ease-out;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.pao-btn:hover {
+    color: #111;
+}
+
+/* front page */
+
+.front-page-header .site-name {
+    font-family: "Playfair Display", serif  !important;
+    color: rgb(255, 255, 255);
+    font-size: 66px;
+    line-height: 79px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.front-page-header .admin-name, .front-page-header .site-description {
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* contact page template*/
+
+.contact-widget .widget_social-media .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: pink;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.contact-widget .widget_social-media .social-icon:last-child {
+    margin-right: 0;
+}
+
+.contact-widget .widget_social-media .social-icon:hover {
+    color: #fff;
+    background-color: #111;
+}
+
+.wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 input[type="tel"], .wpcf7 textarea {
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 5px 5px !important;
+    border: none !important;
+    border-bottom: 1px solid #999 !important;
+    font-style: normal !important;
+    font-family: inherit !important;
+    outline: 0;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    text-transform: none;
+    font-weight: 400;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: border .3s ease;
+    -moz-transition: border .3s ease;
+    transition: border .3s ease;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+}
+
+input.wpcf7-form-control.wpcf7-submit {
+    display: inline-block;
+    position: relative;
+    outline: 0;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 600;
+    padding: 19px 55px;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 7px;
+    color: #fff;
+    background-color: pink !important;
+    border: 1px solid pink !important;
+    border-radius: 0;
+    font-family: inherit !important;
+    /* float: right; */
+    -webkit-transition: color .15s ease-out, background-color .15s ease-out, border-color .15s ease-out;
+    -moz-transition: color .15s ease-out, background-color .15s ease-out, border-color .15s ease-out;
+    transition: color .15s ease-out, background-color .15s ease-out, border-color .15s ease-out;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input.wpcf7-form-control.wpcf7-submit:hover {
+    color: #fff !important;
+    background-color: #111 !important;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+.wpcf7-form .wpcf7-response-output {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 13px !important;
+    padding: 25px !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
+    background-color: #f8d7da;
+    border: 2px solid #721c24 !important;
+    color: #721c24;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+    background-color: #d4edda;
+    border: 2px solid #155724 !important;
+    color: #155724;
+}
+
+/* testimonial archive */
+.testimonials-inner-block:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(http://localhost/pret-a-oser/wp-content/uploads/2020/11/left-quote1.png);
+    width: 45px;
+    height: 35px;
+
+}
+
+.testimonials-inner-block:after {
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: url(http://localhost/pret-a-oser/wp-content/uploads/2020/11/right-quote1.png);
+    width: 45px;
+    height: 35px
+}
+
+/*pagination */
+.page-item a, .page-item span {
+    color:#111;
+}
+
+.page-link.active-link {
+    background-color: pink !important;
+}
